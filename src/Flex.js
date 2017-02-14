@@ -65,4 +65,4 @@ ZippyFlex.propTypes = {
   justifyContent: PropTypes.string
 };
 
-export default Flex;
+export default ZippyFlex;
