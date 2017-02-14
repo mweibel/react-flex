@@ -1,5 +1,8 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { render, findDOMNode } from 'react-dom';
+
+React.findDOMNode = findDOMNode // for backwards compat for react-slide
+
 import Slide from 'react-slide';
 
 import './index.scss';
