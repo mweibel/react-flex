@@ -8,3 +8,7 @@ example.css
 index.html
 dev.html
 .npmignore
+example.css
+index.html
+dev.html
+index.jsx

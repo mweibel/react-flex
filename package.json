@@ -1,6 +1,6 @@
 {
   "name": "@zippytech/react-flex",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A flex component for React which is easy to use.",
   "main": "lib/index.js",
   "repository": {
