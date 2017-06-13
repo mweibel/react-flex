@@ -14,7 +14,8 @@
  * limitations under the License.
  */
 
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import assign from 'object-assign';
 import Component from '@zippytech/react-class';
 
@@ -54,7 +55,7 @@ ZippyFlex.propTypes = {
     PropTypes.number,
     PropTypes.bool
   ]),
-  display: PropTypes.oneOf([ 'flex', 'inline-flex' ]),
+  display: PropTypes.oneOf(['flex', 'inline-flex']),
   inline: PropTypes.bool,
   reverse: PropTypes.bool,
   row: PropTypes.bool,
