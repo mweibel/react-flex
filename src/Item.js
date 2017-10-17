@@ -19,11 +19,17 @@ import PropTypes from 'prop-types';
 import assign from 'object-assign';
 import Component from '@zippytech/react-class';
 
+import shouldComponentUpdate from './shouldComponentUpdate';
 import join from './join';
 import props2className from './props2className';
 import cleanup from './cleanup';
 
 class ZippyFlexItem extends Component {
+  shouldComponentUpdate(nextProps, nextState) {
+    const shouldUpdate = shouldComponentUpdate(this, nextProps, nextState);
+
+    return shouldUpdate;
+  }
   render() {
     const props = this.props;
     const className = join('zippy-react-flex-item', props2className(props));
@@ -45,6 +51,7 @@ class ZippyFlexItem extends Component {
 ZippyFlexItem.defaultProps = { flex: 1 };
 
 ZippyFlexItem.propTypes = {
+  shouldComponentUpdate: PropTypes.func,
   display: PropTypes.oneOf(['flex', 'inline-flex']),
   inline: (props, propName) => {
     if (props[propName] !== undefined) {

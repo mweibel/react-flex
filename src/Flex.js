@@ -23,7 +23,14 @@ import join from './join';
 import props2className from './props2className';
 import cleanup from './cleanup';
 
+import shouldComponentUpdate from './shouldComponentUpdate';
+
 class ZippyFlex extends Component {
+  shouldComponentUpdate(nextProps, nextState) {
+    const shouldUpdate = shouldComponentUpdate(this, nextProps, nextState);
+
+    return shouldUpdate;
+  }
   render() {
     const props = this.props;
     const className = join('zippy-react-flex', props2className(props));
@@ -50,6 +57,7 @@ ZippyFlex.defaultProps = {
 };
 
 ZippyFlex.propTypes = {
+  shouldComponentUpdate: PropTypes.func,
   flex: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,

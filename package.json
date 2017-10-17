@@ -16,8 +16,10 @@
     "build": "npm run lib && npm run build-style",
     "lib": "rm -fr lib && babel --out-dir lib src",
     "build-style": "webpack --config ./build/style.config.js",
-    "build-index": "NODE_ENV=production webpack -p --config ./build/index.config.js",
-    "dev": "webpack-dev-server --progress --colors --config ./build/dev.config.js",
+    "build-index":
+      "NODE_ENV=production webpack -p --config ./build/index.config.js",
+    "dev":
+      "webpack-dev-server --progress --colors --config ./build/dev.config.js",
     "test": "NODE_ENV=test karma start"
   },
   "dependencies": {
@@ -25,8 +27,8 @@
     "object-assign": "^4.1.1"
   },
   "peerDependencies": {
-    "react": ">=0.14.0 || >=15.0.0-0",
-    "react-dom": ">=0.14.0 || >=15.0.0-0",
+    "react": ">=0.14.0 || >=16.0.0-0",
+    "react-dom": ">=0.14.0 || >=15.0.0-0  || >=16.0.0-0",
     "prop-types": ">=16.0.0 || >=15.0.0-0"
   },
   "devDependencies": {
