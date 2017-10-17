@@ -1,6 +1,6 @@
 {
   "name": "@zippytech/react-flex",
-  "version": "3.0.6",
+  "version": "3.0.7",
   "description": "A flex component for React which is easy to use.",
   "main": "lib/index.js",
   "repository": {
@@ -16,10 +16,8 @@
     "build": "npm run lib && npm run build-style",
     "lib": "rm -fr lib && babel --out-dir lib src",
     "build-style": "webpack --config ./build/style.config.js",
-    "build-index":
-      "NODE_ENV=production webpack -p --config ./build/index.config.js",
-    "dev":
-      "webpack-dev-server --progress --colors --config ./build/dev.config.js",
+    "build-index": "NODE_ENV=production webpack -p --config ./build/index.config.js",
+    "dev": "webpack-dev-server --progress --colors --config ./build/dev.config.js",
     "test": "NODE_ENV=test karma start"
   },
   "dependencies": {
